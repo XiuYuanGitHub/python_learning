@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+# File Name: test001.py
+
+import numpy as np    #导入NumPy库
+from numpy import *
+import matplotlib.pyplot as plt    #导入Matplotlib库
+import math
+
+# 测试数据集——二维list
+dataSet = [[-0.017612, 14.053064],[-1.395634, 4.662541],[-0.75, 6.53],[-1.32, 7.15],[0.42, 11.05], [0.41, 7.07]]
+dataMat = mat(dataSet).T
+plt.scatter(dataMat[0],dataMat[1],c='red',marker='o')  #绘制数据集散点图
+
+#绘制直线图形
+X = np.linspace(-2,2,100)
+#建立线性方程
+Y = math.sin(X)
+
+plt.plot(X,Y)
+plt.show()
